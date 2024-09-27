@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Human Hair Reconstruction with Strand-Aligned 3D Gaussians">
+  <meta property="og:title" content="Gaussian Haircut"/>
+  <meta property="og:description" content="Human Hair Reconstruction with Strand-Aligned 3D Gaussians"/>
+  <meta property="og:url" content="https://eth-ait.github.io/GaussianHaircut/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/teaser.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="Gaussian Haircut">
+  <meta name="twitter:description" content="Human Hair Reconstruction with Strand-Aligned 3D Gaussians">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/teaser.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Computer Vision, Computer Graphics, Digital Humans">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Gaussian Haircut</title>
+  <link rel="icon" type="image/x-icon" href="static/images/scissors.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://egorzakharov.github.io">
+        <span class="icon">
+            <i class="fas fa-home"></i>
+        </span>
+        </a>
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://samsunglabs.github.io/NeuralHaircut/">
+              Neural Haircut
+            </a>
+            <a class="navbar-item" href="https://haar.is.tue.mpg.de/">
+              HAAR
+            </a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </nav>  
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><i>Gaussian Haircut</i> ✂️</h1>
+            <h1 class="title is-2 publication-title">Human Hair Reconstruction with Strand-Aligned 3D Gaussians</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://egorzakharov.github.io" target="_blank">Egor Zakharov</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://vanessik.github.io" target="_blank">Vanessa Sklyarova</a><sup>1,2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://ps.is.mpg.de/person/black" target="_blank">Michael J. Black</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://sites.google.com/view/gjnam" target="_blank">Giljoo Nam</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://justusthies.github.io/" target="_blank">Justus Thies</a><sup>2,4</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://ait.ethz.ch/people/hilliges" target="_blank">Otmar Hilliges</a><sup>1</sup>
+              </span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <sup>1</sup><a href="https://ait.ethz.ch">ETH Zurich</a>,
+                <sup>2</sup><a href="https://is.mpg.de">Max Planck Institute for Intelligent Systems</a>,
+                <sup>3</sup><a>Meta</a>,
+                <sup>4</sup><a>Technical University of Darmstadt</a>
+                <br>
+                ECCV 2024
+              </span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2409.14778" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/eth-ait/GaussianHaircut" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2409.14778" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <!-- Your video here -->
+          <source src="static/videos/ksyusha_teaser.mp4"
+          type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          <strong>Gaussian Haircut</strong> reconstructs strand-based hair geometry from a monocular video in a few hours on a single GPU.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              We introduce a new hair modeling method that uses a dual representation of classical hair strands and 3D Gaussians to produce accurate and realistic strand-based reconstructions from multi-view data.
+              In contrast to recent approaches that leverage unstructured Gaussians to model human avatars, our method reconstructs the hair using 3D polylines, or strands.
+              This fundamental difference allows the use of the resulting hairstyles out-of-the-box in modern computer graphics engines for editing, rendering, and simulation.
+              Our 3D lifting method relies on unstructured Gaussians to generate multi-view ground truth data to supervise the fitting of hair strands.
+              The hairstyle itself is represented in the form of the so-called strand-aligned 3D Gaussians.
+              This representation allows us to combine strand-based hair priors, which are essential for realistic modeling of the inner structure of hairstyles, with the differentiable rendering capabilities of 3D Gaussian Splatting.
+              Our method, named Gaussian Haircut, is evaluated on synthetic and real scenes and demonstrates state-of-the-art performance in the task of strand-based hair reconstruction.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- Youtube video -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <!-- Paper video. -->
+        <h2 class="title is-3">Video Presentation</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="publication-video">
+              <!-- Youtube embed code here -->
+              <iframe src="https://www.youtube.com/embed/ro_XeA75s5w?si=HAR0LF3s3h5Jk6z1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End youtube video -->
+
+  <!-- Main idea -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Main idea</h2>
+        <div class="row">
+          <div class="col-lg-16 text-white">
+            <img class="img-fluid mb-3" src="static/images/figure1.png" alt="" >
+          </div>
+        </div>      
+        <div class="content has-text-justified is-four-fifths">
+          <p>
+            <strong>Gaussian Haircut</strong> works with multi-view images and uses strand-aligned 3D Gaussians to reconstruct a hairstyle.
+            In the first stage, <em>3D lifting</em>, we reconstruct the scene using unstructured primitives in the form of Gaussians.
+            These unstructured primitives are then used in the second stage, <em>strands fitting</em>, to supervise our dual hair strand representation consisting of 3D Gaussians that are attached to hair strands.
+            As a result, we produce a realistic strand-based hairstyle that can be rendered, edited, and animated using classical computer graphics techniques.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-lg-16 text-white">
+            <img class="img-fluid mb-3" src="static/images/figure2.png" alt="" >
+          </div>
+        </div>      
+        <div class="content has-text-justified is-four-fifths">
+          <p>
+            (a) In our work, we utilize both structured and unstructured sets of Gaussians. 
+            The former are attached to the strands and thus cover an entire hair volume, while the latter concentrate only on the visible part of the hair surface. 
+            (b) During coarse strand-based fitting, we decode only a set of guiding strands from the latent hair map at each training step, as generating a full hairstyle is computationally- and memory-expensive. 
+            We then convert these strands into a dense hair map suitable for rendering by conducting interpolation in the space of their 3D coordinates. 
+            (c) Finally, we conduct a fine strand-based optimization step. 
+            We decode a dense hairstyle from a latent map and directly optimize their coordinates instead of latent representations.                  </p>
+        </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Video carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Results</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="static/videos/results_cap001.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="static/videos/results_cap366.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="static/videos/results_cap749.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="static/videos/results_cap754.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="static/videos/results_cap759.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End video carousel -->
+
+  <!-- Video carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Comparison</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="static/videos/comp_1.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="static/videos/comp_2.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop height="100%">\
+              <!-- Your video file here -->
+              <source src="static/videos/comp_3.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video4">
+            <video poster="" id="video3" autoplay controls muted loop height="100%">\
+              <!-- Your video file here -->
+              <source src="static/videos/comp_4.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End video carousel -->
+
+  <!-- Video carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Physics simulation and relighting</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="static/videos/physics_1.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="static/videos/physics_2.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End video carousel -->
+
+  <!-- Teaser video-->
+  <section class="hero is-small">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <h2 class="title is-3">Unreal Engine demo</h2>
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <!-- Your video here -->
+          <source src="static/videos/demo.mp4"
+          type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          Hairstyles produced by our method can be easily imported into physically rendered and simulated virtual environments.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+  <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{zakharov2024gh,
+    title={Human Hair Reconstruction with Strand-Aligned 3D Gaussians},
+    author={Zakharov, Egor and Sklyarova, Vanessa and Black, Michael J and Nam, Giljoo and Thies, Justus and Hilliges, Otmar},
+    journal={ArXiv},
+    month={Sep}, 
+    year={2024} 
+}</code></pre>
+      </div>
+  </section>
+  <!--End BibTex citation -->
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCPST0T02M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SCPST0T02M');
+</script>
+
+<!-- End of Statcounter Code -->
+
+</body>
+</html>
