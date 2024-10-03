@@ -2,7 +2,12 @@
 datasets
 
 # External libraries
-ext/
+ext/NeuralHaircut
+ext/openpose
+ext/Matte-Anything
+ext/pytorch3d
+ext/kaolin
+ext/PIXIE
 ext/diff_gaussian_rasterization_hair/third_party
 
 # Visual Studio Code files
