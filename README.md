@@ -8,26 +8,26 @@ This repository contains an official implementation of Gaussian Haircut, a stran
 
 1. **Install CUDA 11.8**
 
- Follow the instructions on https://developer.nvidia.com/cuda-11-8-0-download-archive.
+   Follow the instructions on https://developer.nvidia.com/cuda-11-8-0-download-archive.
 
- Make sure that
-     - PATH includes <CUDA_DIR>/bin
-     - LD_LIBRARY_PATH includes <CUDA_DIR>/lib64
+   Make sure that
+   - PATH includes <CUDA_DIR>/bin
+   - LD_LIBRARY_PATH includes <CUDA_DIR>/lib64
 
- The environment was tested only with this CUDA version.
+   The environment was tested only with this CUDA version.
 
 2. **Install Blender 3.6** in order to create strand visualizations
 
- Follow instructions on https://www.blender.org/download/lts/3-6.
+   Follow instructions on https://www.blender.org/download/lts/3-6.
 
 3. **Close the repo and run the install script**
 
- ```bash
-    git clone git@github.com:eth-ait/GaussianHaircut.git
-    cd GaussianHaircut
-    chmod +x ./install.sh
-    ./install.sh
- ```
+   ```bash
+   git clone git@github.com:eth-ait/GaussianHaircut.git
+   cd GaussianHaircut
+   chmod +x ./install.sh
+   ./install.sh
+   ```
 
 ## Reconstruction
 
@@ -37,17 +37,17 @@ This repository contains an official implementation of Gaussian Haircut, a stran
 
 2. **Setup a directory for the reconstructed scene**
 
- Put the video file in it and rename it to raw.mp4
+   Put the video file in it and rename it to raw.mp4
 
 3. **Run the script**
 
- ```bash
+   ```bash
    export PROJECT_DIR="[/path/to/]GaussianHaircut"
    export BLENDER_DIR="[/path/to/blender/folder/]blender"
    DATA_PATH="[path/to/scene/folder]" ./run.sh
- ```
+   ```
 
-The script performs data pre-processing, reconstruction, and visualization.
+   The script performs data pre-processing, reconstruction, and visualization.
 
 ## License
 
