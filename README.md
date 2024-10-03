@@ -33,7 +33,7 @@ This repository contains an official implementation of Gaussian Haircut, a stran
 
 1. **Record a monocular video**
 
-   *Tips: use examples on the project as references; introduce as little motion blur as possible; be mindful that off-the-shelf segmentation and pose estimations networks will be run for the captured frames*
+   Tips: use examples on the project as references; introduce as little motion blur as possible; be mindful that off-the-shelf segmentation and pose estimations networks will be run for the captured frames
 
 2. **Setup a directory for the reconstructed scene**
 
