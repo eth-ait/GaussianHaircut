@@ -33,7 +33,7 @@ This repository contains an official implementation of Gaussian Haircut, a stran
 
 1. **Record a monocular video**
 
-   Tips: use examples on the project as references and introduce as little motion blur as possible
+   Use examples on the project page as references and introduce as little motion blur as possible.
 
 2. **Setup a directory for the reconstructed scene**
 
@@ -51,9 +51,9 @@ This repository contains an official implementation of Gaussian Haircut, a stran
 
 ## License
 
-This code is based on 3D Gaussian Splatting project, please refer to LICENSE_3DGS for terms and conditions. The rest of the code is distributed under CC BY-NC-SA 4.0.
+This code is based on the 3D Gaussian Splatting project. For terms and conditions, please refer to LICENSE_3DGS. The rest of the code is distributed under CC BY-NC-SA 4.0.
 
-If you find this code useful in your project, make sure to cite the papers below.
+If this code is helpful in your project, cite the papers below.
 
 ## Citation
 
@@ -61,7 +61,7 @@ If you find this code useful in your project, make sure to cite the papers below
 @inproceedings{zakharov2024gh,
    title = {Human Hair Reconstruction with Strand-Aligned 3D Gaussians},
    author = {Zakharov, Egor and Sklyarova, Vanessa and Black, Michael J and Nam, Giljoo and Thies, Justus and Hilliges, Otmar},
-   booktitle = {European Conference of Computer vision (ECCV)},
+   booktitle = {European Conference of Computer Vision (ECCV)},
    year = {2024}
 } 
 ```
