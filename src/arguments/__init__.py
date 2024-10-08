@@ -56,7 +56,6 @@ class ModelParams(ParamGroup):
         self.data_device = "cuda"
         self.binarize_masks = False
         self.eval = False
-        self.train_orient_conf = True
         self.load_synthetic_rgba = True
         self.load_synthetic_geom = True
         self.trainable_cameras = True
@@ -116,6 +115,9 @@ class OptimizationParams(ParamGroup):
         self.densify_grad_threshold = 0.0002
         self.opacity_reg_from_iter = 30_000
         self.gaussian_pruning_threshold = 0.5
+
+        self.train_orient_conf = True
+        self.use_gt_orient_conf = True
 
         super().__init__(parser, "Optimization Parameters")
 
