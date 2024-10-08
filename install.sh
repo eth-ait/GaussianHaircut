@@ -57,7 +57,7 @@ conda deactivate && conda activate matte_anything
 pip install git+https://github.com/facebookresearch/segment-anything.git
 python -m pip install 'git+https://github.com/facebookresearch/detectron2.git'
 cd $PROJECT_DIR/ext/Matte-Anything/GroundingDINO && pip install -e .
-pip install supervision==0.21.0 # fixes the GroundingDINO error
+pip install supervision==0.22.0 # fixes the GroundingDINO error
 cd $PROJECT_DIR/ext/Matte-Anything && mkdir pretrained
 cd $PROJECT_DIR/ext/Matte-Anything/pretrained
 wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth

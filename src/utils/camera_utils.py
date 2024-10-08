@@ -62,12 +62,10 @@ def loadCam(args, id, cam_info, resolution_scale):
         basename = os.path.basename(cam_info.image_path).split('.')[0]
         resized_orient_angle = PILtoTorch(Image.open(f'{args.model_path}/train_cropped/ours_{args.iteration_data}/orients/{basename}.png'), resolution)
         resized_orient_conf = F.interpolate(torch.load(f'{args.model_path}/train_cropped/ours_{args.iteration_data}/orient_confs/{basename}.pth').float()[None], size=resolution[::-1], mode='bilinear')[0]
-        resized_depth = F.interpolate(torch.load(f'{args.model_path}/train_cropped/ours_{args.iteration_data}/depths/{basename}.pth').float()[None], size=resolution[::-1], mode='bilinear')[0]
     else:
         resized_orient_angle = PILtoTorch(Image.open(cam_info.image_path.replace(f'images_2', f'orientations_2/angles').replace('png', 'png')), resolution, max_value=180.0) # [0, 1], where 1 stands for pi
         resized_orient_var = F.interpolate(torch.from_numpy(np.load(cam_info.image_path.replace(f'images_2', f'orientations_2/vars').replace('png', 'npy'))).float()[None, None], size=resolution[::-1], mode='bilinear')[0] / math.pi**2
         resized_orient_conf = 1 / (resized_orient_var ** 2 + 1e-7)
-        resized_depth = torch.zeros_like(resized_mask_hair)
 
     gt_image = resized_image_rgb[:3, ...]
     gt_mask_body = resized_mask_body[:1, ...]
@@ -77,7 +75,7 @@ def loadCam(args, id, cam_info, resolution_scale):
         gt_mask_hair = (gt_mask_hair >= 0.5).float()
     gt_orient_angle = resized_orient_angle[:1, ...]
     gt_orient_conf = resized_orient_conf[:1, ...]
-    gt_depth = resized_depth[:1, ...]
+    gt_depth = torch.empty_like(gt_orient_conf)
 
     return Camera(colmap_id=cam_info.uid, R=cam_info.R, T=cam_info.T,
                   FoVx=cam_info.FovX, FoVy=cam_info.FovY, width=cam_info.width, height=cam_info.height,

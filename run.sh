@@ -1,8 +1,8 @@
 export GPU="0"
 export CAMERA="PINHOLE"
-export EXP_NAME_1="stage1_test"
-export EXP_NAME_2="stage2_test"
-export EXP_NAME_3="stage3_test"
+export EXP_NAME_1="stage1"
+export EXP_NAME_2="stage2"
+export EXP_NAME_3="stage3"
 
 #
 # Ensure that the following environment variables are accessible to the script:
