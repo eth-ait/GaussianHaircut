@@ -19,7 +19,7 @@ import shutil
 
 def main(input_path, exp_name_3):
     os.makedirs(f'{input_path}/curves_reconstruction/{exp_name_3}/raw_frames', exist_ok=True)
-    # os.system(f'ffmpeg -i {input_path}/raw.mp4 -qscale:v 2 {input_path}/curves_reconstruction/{exp_name_3}/raw_frames/%06d.jpg')
+    os.system(f'ffmpeg -i {input_path}/raw.mp4 -qscale:v 2 {input_path}/curves_reconstruction/{exp_name_3}/raw_frames/%06d.jpg')
     os.makedirs(f'{input_path}/curves_reconstruction/{exp_name_3}/frames', exist_ok=True)
     img_names = sorted(os.listdir(f'{input_path}/curves_reconstruction/{exp_name_3}/train/ours_30000/renders'))
     print(len(img_names))

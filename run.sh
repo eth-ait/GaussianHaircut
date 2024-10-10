@@ -156,8 +156,7 @@ conda activate gaussian_splatting_hair && cd $PROJECT_DIR/src
 CUDA_VISIBLE_DEVICES="$GPU" python render_gaussians.py \
     -s $DATA_PATH -m "$DATA_PATH/3d_gaussian_splatting/$EXP_NAME_1" \
     --skip_test --scene_suffix "_cropped" --iteration 30000 \
-    --trainable_cameras --trainable_intrinsics --use_barf \
-    --render_direction
+    --trainable_cameras --trainable_intrinsics --use_barf
 
 # Get FLAME mesh scalp maps
 conda activate gaussian_splatting_hair && cd $PROJECT_DIR/src/preprocessing

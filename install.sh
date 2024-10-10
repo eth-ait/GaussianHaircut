@@ -42,6 +42,8 @@ conda activate gaussian_splatting_hair
 # Download Neural Haircut files
 cd $PROJECT_DIR/ext/NeuralHaircut
 gdown --folder https://drive.google.com/drive/folders/1TCdJ0CKR3Q6LviovndOkJaKm8S1T9F_8
+cd $PROJECT_DIR/ext/NeuralHaircut/pretrained_models/diffusion_prior # downloads updated diffusion prior
+gdown 1_9EOUXHayKiGH5nkrayncln3d6m1uV7f
 cd $PROJECT_DIR/ext/NeuralHaircut/PIXIE
 gdown 1mPcGu62YPc4MdkT8FFiOCP629xsENHZf && tar -xvzf pixie_data.tar.gz ./ && rm pixie_data.tar.gz
 cd $PROJECT_DIR/ext/hyperIQA && mkdir pretrained && cd pretrained
@@ -67,8 +69,11 @@ gdown 1d97oKuITCeWgai2Tf3iNilt6rMSSYzkW
 
 # OpenPose
 cd $PROJECT_DIR/ext/openpose
+gdown 1Yn03cKKfVOq4qXmgBMQD20UMRRRkd_tV && tar -xvzf models.tar.gz && rm models.tar.gz # downloads openpose checkpoint
 conda deactivate
 git submodule update --init --recursive --remote
+conda create -y -n openpose cmake=3.20 -c conda-forge # needed to avoid cmake complining error
+conda activate openpose
 sudo apt install libopencv-dev # installation instructions are from EasyMocap, in case of problems refer to the official OpenPose docs
 sudo apt install protobuf-compiler libgoogle-glog-dev
 sudo apt install libboost-all-dev libhdf5-dev libatlas-base-dev
@@ -76,14 +81,15 @@ mkdir build
 cd build
 cmake .. -DBUILD_PYTHON=true -DUSE_CUDNN=off
 make -j8
+conda deactivate
 
 # PIXIE
 cd $PROJECT_DIR/ext && git clone https://github.com/yfeng95/PIXIE
 cd $PROJECT_DIR/ext/PIXIE
 chmod +x fetch_model.sh && ./fetch_model.sh
 conda create -y -n pixie-env python=3.8 pytorch==2.0.0 torchvision==0.15.0 torchaudio==2.0.0 \
-    pytorch-cuda=11.8 fvcore pytorch3d::pytorch3d kornia matplotlib \
-    -c pytorch -c nvidia -c fvcore -c conda-forge # this environment works with RTX 4090
+    pytorch-cuda=11.8 fvcore pytorch3d==0.7.5 kornia matplotlib \
+    -c pytorch -c nvidia -c fvcore -c conda-forge -c pytorch3d # this environment works with RTX 4090
 conda activate pixie-env
 pip install pyyaml==5.4.1
 pip install git+https://github.com/1adrianb/face-alignment.git@54623537fd9618ca7c15688fd85aba706ad92b59 # install this commit to avoid error

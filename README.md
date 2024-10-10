@@ -47,7 +47,7 @@ This repository contains an official implementation of Gaussian Haircut, a stran
    DATA_PATH="[path/to/scene/folder]" ./run.sh
    ```
 
-   The script performs data pre-processing, reconstruction, and visualization.
+   The script performs data pre-processing, reconstruction, and final visualization using Blender. Use Tensorboard to see intermediate visualizations.
 
 ## License
 

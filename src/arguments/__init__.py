@@ -56,8 +56,8 @@ class ModelParams(ParamGroup):
         self.data_device = "cuda"
         self.binarize_masks = False
         self.eval = False
-        self.load_synthetic_rgba = True
-        self.load_synthetic_geom = True
+        self.load_synthetic_rgba = False
+        self.load_synthetic_geom = False
         self.trainable_cameras = True
         self.trainable_intrinsics = True
         self.use_barf = True
