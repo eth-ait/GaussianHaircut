@@ -186,13 +186,13 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              We introduce a new hair modeling method that uses a dual representation of classical hair strands and 3D Gaussians to produce accurate and realistic strand-based reconstructions from multi-view data.
-              In contrast to recent approaches that leverage unstructured Gaussians to model human avatars, our method reconstructs the hair using 3D polylines, or strands.
-              This fundamental difference allows the use of the resulting hairstyles out-of-the-box in modern computer graphics engines for editing, rendering, and simulation.
-              Our 3D lifting method relies on unstructured Gaussians to generate multi-view ground truth data to supervise the fitting of hair strands.
-              The hairstyle itself is represented in the form of the so-called strand-aligned 3D Gaussians.
-              This representation allows us to combine strand-based hair priors, which are essential for realistic modeling of the inner structure of hairstyles, with the differentiable rendering capabilities of 3D Gaussian Splatting.
-              Our method, named Gaussian Haircut, is evaluated on synthetic and real scenes and demonstrates state-of-the-art performance in the task of strand-based hair reconstruction.
+              我们介绍了一种新的头发建模方法，该方法使用经典头发束和3D高斯的双重表示，能够从多视角数据中生成准确且真实的基于束的重建。
+              与最近利用无结构高斯建模人类头像的方法相比，我们的方法使用3D多线段或束来重建头发。
+              这种根本性的差异使得生成的发型可以直接在现代计算机图形引擎中用于编辑、渲染和模拟。
+              我们的3D提升方法依赖于无结构高斯生成多视角的真实数据，以监督头发束的拟合。
+              发型本身以所谓的束对齐3D高斯的形式表示。
+              这种表示使我们能够结合基于束的头发先验，这对于真实建模发型内部结构至关重要，以及3D高斯点云的可微渲染能力。
+              我们的方法名为Gaussian Haircut，在合成和真实场景中进行了评估，并在基于束的头发重建任务中展示了最先进的性能。
             </p>
           </div>
         </div>
@@ -232,10 +232,11 @@
         </div>      
         <div class="content has-text-justified is-four-fifths">
           <p>
-            <strong>Gaussian Haircut</strong> works with multi-view images and uses strand-aligned 3D Gaussians to reconstruct a hairstyle.
-            In the first stage, <em>3D lifting</em>, we reconstruct the scene using unstructured primitives in the form of Gaussians.
-            These unstructured primitives are then used in the second stage, <em>strands fitting</em>, to supervise our dual hair strand representation consisting of 3D Gaussians that are attached to hair strands.
-            As a result, we produce a realistic strand-based hairstyle that can be rendered, edited, and animated using classical computer graphics techniques.
+            <strong>Gaussian Haircut</strong> 使用多视角图像和基于束对齐的3D高斯重建发型。
+            在第一阶段，<em>3D 提升</em>，我们使用无结构原语（以高斯的形式）重建场景。
+            然后，这些无结构原语在第二阶段<em>束拟合</em>中被用来监督我们由附加到发束的3D高斯组成的双重发束表示。
+            结果，我们生成了一种逼真的基于束的发型，可以使用经典计算机图形技术进行渲染、编辑和动画处理。
+
           </p>
         </div>
         <div class="row">
@@ -245,12 +246,13 @@
         </div>      
         <div class="content has-text-justified is-four-fifths">
           <p>
-            (a) In our work, we utilize both structured and unstructured sets of Gaussians. 
-            The former are attached to the strands and thus cover an entire hair volume, while the latter concentrate only on the visible part of the hair surface. 
-            (b) During coarse strand-based fitting, we decode only a set of guiding strands from the latent hair map at each training step, as generating a full hairstyle is computationally- and memory-expensive. 
-            We then convert these strands into a dense hair map suitable for rendering by conducting interpolation in the space of their 3D coordinates. 
-            (c) Finally, we conduct a fine strand-based optimization step. 
-            We decode a dense hairstyle from a latent map and directly optimize their coordinates instead of latent representations.                  </p>
+            (a) 在我们的工作中，我们利用了结构化和非结构化的高斯集合。 
+            前者附加在发束上，因此覆盖了整个头发体积，而后者则仅集中在头发表面的可见部分。 
+            (b) 在粗略的基于束的拟合过程中，我们在每个训练步骤中仅解码一组指导性发束，因为生成完整的发型在计算和内存上都很昂贵。 
+            然后，我们通过在其3D坐标空间中进行插值，将这些发束转换为适合渲染的密集发图。 
+            (c) 最后，我们进行细致的基于束的优化步骤。 
+            我们从潜在图中解码出密集的发型，并直接优化它们的坐标，而不是潜在表示。
+          </p>    
         </div>
     </div>
     </div>
@@ -392,7 +394,7 @@
       <div class="container is-max-desktop content">
         <h2 class="title">BibTeX</h2>
         <pre><code>@article{zakharov2024gh,
-    title={Human Hair Reconstruction with Strand-Aligned 3D Gaussians},
+    title={人类头发重建与束对齐的 3D Gaussians},
     author={Zakharov, Egor and Sklyarova, Vanessa and Black, Michael J and Nam, Giljoo and Thies, Justus and Hilliges, Otmar},
     journal={ArXiv},
     month={Sep}, 
@@ -409,9 +411,8 @@
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            本页面使用<a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">学术项目页面模板</a>构建，该模板来自<a href="https://nerfies.github.io" target="_blank">Nerfies</a>项目页面。
+            您可以自由借用本网站的源代码，我们只要求您在页脚链接回此页面。<br> 本网站根据<a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">创意共享署名-相同方式共享 4.0 国际许可证</a>进行许可。
           </p>
 
         </div>
