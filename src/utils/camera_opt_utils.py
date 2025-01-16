@@ -1,3 +1,5 @@
+# The code is taken from https://github.com/chenhsuanlin/bundle-adjusting-NeRF
+
 import numpy as np
 import os,sys,time
 import torch
