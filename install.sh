@@ -79,7 +79,7 @@ sudo apt install protobuf-compiler libgoogle-glog-dev
 sudo apt install libboost-all-dev libhdf5-dev libatlas-base-dev
 mkdir build
 cd build
-cmake .. -DBUILD_PYTHON=true -DUSE_CUDNN=off
+cmake .. -DBUILD_PYTHON=true -DUSE_CUDNN=off -DNCNN_BENCHMARK=ON -DNCNN_VULKAN=ON -D Protobuf_PROTOC_EXECUTABLE=/root/miniconda3/envs/openpose/bin/protoc
 make -j8
 conda deactivate
 
